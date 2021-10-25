@@ -48,6 +48,7 @@ class PillowCase {
   String candyList[] = { "M&Ms", "Pink Starburst", "Hershey's Bar", "Milky Way", "Twix", "Reese's", "Kit Kat" };
 //this calculates the total number candies received and prints a summary
   void printNumCandie() {
+    // a for loop to go throught the array list and count the candies
     for (int i = 0; i < candies.size(); i++) {
       if (candies.get(i).equals("M&Ms")) {
         counter[0] += 1;
@@ -69,12 +70,12 @@ class PillowCase {
     for (int value : counter) {
       sum += value;
     }
-    double mySum = sum;
+    double mySum = sum; //typecasting 
     double mySize = SIZE;
-    double percent = (mySum / mySize) * 100;
+    double percent = (mySum / mySize) * 100; //calculating percentage
     System.out.println("We got " + sum + " candies. " + percent + "% of our pillowcase.");
     System.out.println("We got...");
-    for (int z = 0; z < counter.length; z++) {
+    for (int z = 0; z < counter.length; z++) { // a for loop to summarize the candies.
       if (counter[z] > 0) {
         System.out.println(counter[z] + " " + candyList[z]);
       }
